@@ -3,12 +3,12 @@
         <strong>Emergency List</strong>
     </div>
     <div class="scrollDiv">
-        <div class="row insideScroll" >
+        <div class="row insideScroll" ng-repeat="alertObject in emergencyList.alertObjects">
             <div class="col-lg-4">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
             <div class="col-lg-8" style="color: #269abc;" >
-                #STATUS from #Serial number
+                #STATUS from #Serial number from {{alertObject.id}}
                 #CustmDesignedInformation
                 </br>
                 </br>
