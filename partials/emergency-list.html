@@ -3,6 +3,15 @@
         <strong>Emergency List</strong>
     </div>
     <div class="scrollDiv">
+        <div class="row createEvent">
+            <div class="col-lg-4">
+                <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
+            </div>
+            <div class="col-lg-8" style="padding: 20px">
+                <input type="text" id="emgList" name="emgList" placeholder="Create Event..." ng-model="createEvent"/>
+                <input type="submit" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
+            </div>
+        </div>
         <div class="row insideScroll" ng-repeat="alertObject in emergencyList.alertObjects" ng-click="emergencyList.click($index)">
             <div class="col-lg-4">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
