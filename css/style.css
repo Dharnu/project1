@@ -20,6 +20,11 @@
     border: 1px solid;
     cursor:pointer;
 }
+.tableDiv{
+    background-color: #e1edf7;
+    margin-top: 5px; 
+    border: 1px solid; 
+}
 table {
     border-collapse: collapse;
     width: 100%;

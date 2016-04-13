@@ -1,5 +1,6 @@
 (function(){
-var app=angular.module('project1-directives',[]);
+    var app=angular.module('project1-directives',[]);
+
 
 app.directive('emergencyList',['communication',function(communication){
 	return{
@@ -22,7 +23,7 @@ app.directive('emergencyList',['communication',function(communication){
 	}
 	}]);
 
-app.directive("pageComponents",function(){
+    app.directive("pageComponents",function(){
 	return{
 		restrict:'E',
 		scope:{},
@@ -32,14 +33,17 @@ app.directive("pageComponents",function(){
 		//	console.log(s.$parent.main);
 		}
 	}
-	});
+    });
 
-app.directive("graph",function(){
+    app.directive("graph",function(){
 	return{
 		restrict:'E',
 		scope:{},
+		require:['graph'],
 		templateUrl:"./partials/graph.html",
-		controller:function(){},
+		controller:function(){
+			this.graphs;
+		},
 		controllerAs:"graphImage",
 		link:function(s,e,a,c){
 			s.$on("graph",function(){
@@ -49,5 +53,21 @@ app.directive("graph",function(){
 			})
 		}
 	}
-	});
-	})();
+    });
+        
+    app.directive('mainView',function(){
+        return{
+            restrict:'E',
+            scope:{},
+            templateUrl:"./partials/main-view.html",
+            require:['mainView'],
+            controller:function(){
+                    this.individualValue},
+            controllerAs:'mainView',
+            link:function(s,e,a,c){
+                    c[0].individualValue=s.$parent.$parent.main.mainView;
+                    console.log(c[0]);
+            }
+        }
+    });
+})();

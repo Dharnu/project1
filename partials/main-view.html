@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="mainDiv">
+        <div style="height:35px;background-color: #e3e3e3;">
+            <strong>Main View</strong>
+        </div>
+        <div class="scrollDiv">
+            <div class="row tableDiv" >
+                <table>
+                    <tr>
+                      <th>Patient</th>
+                      <th>Office</th>
+                      <th>Phone #</th>
+                      <th>POC</th>
+                      <th>Last Activity</th>
+                    </tr>
+                    <tr  ng-repeat="individualValue in mainView.individualValue" style="cursor:pointer;">
+                      <td>{{individualValue.data.Patient}}</td>
+                      <td>{{individualValue.data.Office}}</td>
+                      <td>{{individualValue.data.Phone}}</td>
+                      <td>{{individualValue.data.POC}}</td>
+                      <td>{{individualValue.data.LastActivity}}</td>
+                    </tr>
+                    
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
