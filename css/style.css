@@ -20,6 +20,11 @@
     border: 1px solid;
     cursor:pointer;
 }
+.createEvent{
+    background-color: #e1edf7;
+    margin-top: 20px; 
+    border: 1px solid;
+}
 .tableDiv{
     background-color: #e1edf7;
     margin-top: 5px; 

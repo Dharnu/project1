@@ -8,12 +8,18 @@ app.directive('emergencyList',['communication',function(communication){
 		scope:{},
 		templateUrl:"./partials/emergency-list.html",
 		require:['emergencyList','^pageComponents'],
-		controller:function($rootScope){
+		controller:function($rootScope, $scope){
 			this.alertObjects;
 			this.click=function(num){
 				//console.log(this.alertObjects[num].id);
 				communication.tellgraph(this.alertObjects[num].id);
 				};
+                                this.addEvent = function(){
+                                    console.log("add event");
+                                    this.alertObjects.push({
+                                        id:10, data: $scope.createEvent
+                                    });
+                                };
 			},
 		controllerAs:'emergencyList',
 		link:function(s,e,a,c){
@@ -75,4 +81,6 @@ app.directive('emergencyList',['communication',function(communication){
             }
         }
     });
+    
+    
 })();
