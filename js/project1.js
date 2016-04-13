@@ -19,14 +19,14 @@
 		},{
                 id:4, data:{"Patient":"Ed","Office":"Lafayette","Phone":"555-555-5533","POC":"Employee 3","LastActivity":"No Activity"}
             }];
-            this.graphImage=[{
-                id:1, image:"images/chart1.png"
-                },{
-                id:2, image:"images/chart2.png"
-                },{
-                id:3, image:"images/chart3.png"
-                },{
-                id:4, image:"images/chart4.jpg"
-            }];
+            this.graphImages={
+                id1:"images/chart1.png",
+               
+                id2:"images/chart2.png",
+                
+                id3:"images/chart3.png",
+                
+                id4:"images/chart4.jpg"
+            };
 	});
 })();
