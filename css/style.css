@@ -18,6 +18,7 @@
     background-color: #e1edf7;
     margin-top: 20px; 
     border: 1px solid;
+    cursor:pointer;
 }
 table {
     border-collapse: collapse;

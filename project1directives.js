@@ -1,26 +1,28 @@
 (function(){
 var app=angular.module('project1-directives',[]);
 
-app.directive("emergencyList",function(){
+app.directive("emergencyList",['',function(){
 	return{
-		restrict:E,
+		restrict:'E',
 		scope:{},
 		templateUrl:"./partials/emergency-list.html",
-		require:'^Maincontroller',
+		require:['^Maincontroller'],
 		controller:function(){},
-		link:function(s,e,a,c){}
-	};
-	});
+		link:function(s,e,a,c){
+			console.log(c);
+		}
+	}
+	}]);
 
 app.directive("pageComponents",function(){
 	return{
-		restrict:E,
+		restrict:'E',
 		scope:{},
 		templateUrl:"./partials/page-components.html",
-		require:'^Maincontroller',
+		require:['^Maincontroller'],
 		controller:function(){},
 		link:function(s,e,a,c){}
-	};
-	})
+	}
+	});
 
 	})();

@@ -1,5 +1,5 @@
 (function(){
-	var app=angular.module('project1',['project1-directives']);
+	var app=angular.module('project1',['project1-directives','project1-factories']);
 	app.controller('Maincontroller',function(){
 		this.emergencyListItems=[{
 			id:1, data:"data1"
