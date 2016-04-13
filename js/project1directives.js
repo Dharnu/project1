@@ -1,15 +1,18 @@
 (function(){
 var app=angular.module('project1-directives',[]);
 
-app.directive("emergencyList",function(){
+app.directive('emergencyList',function(){
 	return{
 		restrict:'E',
 		scope:{},
 		templateUrl:"./partials/emergency-list.html",
-		require:['^Maincontroller'],
-		controller:function(){},
+		require:['emergencyList'],
+		controller:function(){
+			this.alertObjects},
+		controllerAs:'emergencyList',
 		link:function(s,e,a,c){
-			console.log(c);
+			c[0].alertObjects=s.$parent.$parent.main.emergencyListItems;
+			console.log(c[0]);
 		}
 	}
 	});
@@ -19,10 +22,20 @@ app.directive("pageComponents",function(){
 		restrict:'E',
 		scope:{},
 		templateUrl:"./partials/page-components.html",
-		require:['^Maincontroller'],
+		controller:function(){},
+		link:function(s,e,a,c){
+			console.log(s.$parent.main);
+		}
+	}
+	});
+
+app.directive("graph",function(){
+	return{
+		restrict:'E',
+		scope:{},
+		templateUrl:"./partials/graph.html",
 		controller:function(){},
 		link:function(s,e,a,c){}
 	}
 	});
-
 	})();
