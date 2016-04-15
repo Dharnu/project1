@@ -2,16 +2,17 @@
 	var app = angular.module('project1-directives', ['ngAnimate']);
 
 
-	app.directive('emergencyList', ['communication', function(communication) {
+	app.directive('emergencyList', ['communication','$timeout','$interval', function(communication,$timeout,$interval) {
 		return {
 			restrict: 'E',
 			scope: {},
 			templateUrl: "./partials/emergency-list.html",
 			require: ['emergencyList', '^pageComponents'],
 			controller: function($rootScope, $scope) {
-				this.alertObjects;
+				//this.alertObjects=$scope.$parent.$parent.main.emergencyListItems;				
+				//this.addElement=function
+				
 				this.click = function(num) {
-					//console.log(this.alertObjects[num].id);
 					communication.tellgraph(this.alertObjects[num].id);
 				};
 				this.addEvent = function() {
@@ -25,7 +26,17 @@
 			controllerAs: 'emergencyList',
 			link: function(s, e, a, c) {
 				c[0].alertObjects = s.$parent.$parent.main.emergencyListItems;
-				console.log(c[1]);
+				
+				c[0].addElement=function(){
+					console.log(c[0].alertObjects.length);
+					c[0].alertObjects.unshift(c[0].alertObjects[c[0].alertObjects.length-1]);
+										console.log(c[0].alertObjects.length);
+
+					c[0].alertObjects.splice(c[0].alertObjects.length-1,1);
+										console.log(c[0].alertObjects.length);
+
+				};	
+				 $interval(c[0].addElement,1000);
 			}
 		}
 	}]);
