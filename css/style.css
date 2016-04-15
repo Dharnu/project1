@@ -16,13 +16,14 @@
 }
 .insideScroll{
     background-color: #e1edf7;
-    margin-top: 20px; 
+    margin-top: 10px; 
     border: 1px solid;
     cursor:pointer;
 }
 .createEvent{
     background-color: #e1edf7;
     margin-top: 20px; 
+    margin-bottom: 20px;
     border: 1px solid;
 }
 .tableDiv{
@@ -48,4 +49,41 @@ tr:nth-child(even){background-color: #f2f2f2}
 th {
     background-color: #4CAF50;
     color: white;
+}
+
+.ng-enter {
+  -webkit-transition: 1s ease;
+  transition: 1s ease ;
+  opacity: 0;
+  background-color: #222222;
+  /*margin-left: 100%;*/
+}
+
+.ng-enter-active {
+    -webkit-transform:scale(1);
+  opacity: 1;
+  background-color: #269abc;
+  /*margin-left: 0;*/
+}
+        
+.ng-leave {
+  -webkit-transition: 1s;
+  transition: 1s;
+  
+  margin-left: 0;
+}
+
+.ng-leave-active {
+  margin-left: 100%;
+}
+
+.ng-move {
+  -webkit-transition: 2s;
+  transition: 2s;
+  
+  background: gold;
+}
+
+.ng-move-active {
+  background: #fff;
 }

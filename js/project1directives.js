@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('project1-directives', []);
+	var app = angular.module('project1-directives', ['ngAnimate']);
 
 
 	app.directive('emergencyList', ['communication', function(communication) {
