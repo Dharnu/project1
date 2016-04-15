@@ -30,6 +30,9 @@
     margin-top: 5px; 
     border: 1px solid; 
 }
+.mainView{
+    cursor:pointer;
+}
 table {
     border-collapse: collapse;
     width: 100%;

@@ -13,7 +13,7 @@
                       <th>POC</th>
                       <th>Last Activity</th>
                     </tr>
-                    <tr  ng-repeat="individualValue in mainView.individualValue" style="cursor:pointer;">
+                    <tr class="mainView" ng-repeat="individualValue in mainView.individualValue"   ng-click="mainView.click($index)">
                       <td>{{individualValue.data.Patient}}</td>
                       <td>{{individualValue.data.Office}}</td>
                       <td>{{individualValue.data.Phone}}</td>
