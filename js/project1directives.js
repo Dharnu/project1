@@ -36,7 +36,7 @@
 										console.log(c[0].alertObjects.length);
 
 				};	
-				 $interval(c[0].addElement,1000);
+				 $interval(c[0].addElement,5000);
 			}
 		}
 	}]);
