@@ -32,8 +32,8 @@
 					c[0].alertObjects.unshift(c[0].alertObjects[c[0].alertObjects.length-1]);
 										console.log(c[0].alertObjects.length);
 
-					c[0].alertObjects.splice(c[0].alertObjects.length-1,1);
-										console.log(c[0].alertObjects.length);
+					// c[0].alertObjects.splice(c[0].alertObjects.length-1,1);
+					// 					console.log(c[0].alertObjects.length);
 
 				};	
 				 $interval(c[0].addElement,1000);

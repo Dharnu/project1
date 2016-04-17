@@ -12,7 +12,7 @@
                 <input type="submit" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
             </div>
         </div>
-        <div class="row insideScroll" ng-repeat="alertObject in emergencyList.alertObjects" ng-click="emergencyList.click($index)">
+        <div class="row insideScroll" ng-repeat="alertObject in emergencyList.alertObjects track by $index" ng-click="emergencyList.click($index)">
             <div class="col-lg-4">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
