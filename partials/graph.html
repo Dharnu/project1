@@ -1,4 +1,15 @@
-<div class="mainDiv">
-    Graph
-    <img ng-src="{{graphImage.displayImage}}"  width="500px" height="450px"/>
+<div class="imgCenter" style="height: 450px;padding: 5px">
+    <div class="mainDiv" style="height: 450px;">
+        <img id="myImg" ng-src="{{graphImage.displayImage}}" alt="Home Care"  width="500px" height="445px" onclick="showImgModal()"/>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+      <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="imgModal" width="100%" height="auto">
+
 </div>

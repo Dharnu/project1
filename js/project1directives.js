@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('project1-directives', []);
+	var app = angular.module('project1-directives', ['ngAnimate']);
 
 
 	app.directive('emergencyList', ['communication','$timeout','$interval', function(communication,$timeout,$interval) {
@@ -36,7 +36,7 @@
 					// 					console.log(c[0].alertObjects.length);
 
 				};	
-				 $interval(c[0].addElement,1000);
+				 $interval(c[0].addElement,5000);
 			}
 		}
 	}]);

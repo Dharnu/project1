@@ -4,21 +4,23 @@
     </div>
     <div class="scrollDiv">
         <div class="row createEvent">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
-            <div class="col-lg-8" style="padding: 20px">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding: 20px">
                 <input type="text" id="emgList" name="emgList" placeholder="Create Event..." ng-model="createEvent"/>
                 <input type="submit" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
             </div>
         </div>
-        <div class="row insideScroll" ng-repeat="alertObject in emergencyList.alertObjects track by $index" ng-click="emergencyList.click($index)">
-            <div class="col-lg-4">
+
+        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects" ng-click="emergencyList.click($index)">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
-            <div class="col-lg-8" style="color: #269abc;" >
-                #STATUS from #Serial number from {{alertObject.id}}
-                #CustmDesignedInformation {{alertObject.data}}
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="color: #269abc;" >
+                #STATUS from #Serial number {{alertObject.id}}</br>
+                {{alertObject.data}}
 
                 </br>
                 </br>
