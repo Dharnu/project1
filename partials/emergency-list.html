@@ -1,5 +1,5 @@
-<div class="mainDiv" count="10" interval="3000">
-    <div style="height:35px; width:99%;margin-left: auto;margin-right: auto;background-color: #e3e3e3;">
+<div class="mainDiv borderRadius" count="10" interval="3000">
+    <div class="listDiv">
         <strong>Emergency List</strong>
     </div>
     <div class="row createEvent">
@@ -12,11 +12,12 @@
         </div>
     </div>
     <div class="scrollDiv">
-        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects track by $index" key-property="id" ng-click="emergencyList.click($index)" >
+        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects  | stopdisplay"  ng-click="emergencyList.click($index)" >
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="color: #269abc;" >
+                <span class="pull-right"><img src="images/tick.png" height="20px" width="20px"></span>
                 #STATUS from #Serial number {{alertObject.id}}</br>
                 {{alertObject.data}}
 
@@ -30,8 +31,8 @@
             </div>
         </div>
     </div>
-    <div>
-        <input type="button" value="Active"/>
-        <input type="button" value="Pause"/>
+    <div style="padding: 0px 0px 0px 30px;">
+        <input type="button" value="Active" ng-click="emergencyList.pauseScrollForDemo(false)" />
+        <input type="button" value="Pause" ng-click="emergencyList.pauseScrollForDemo(true)"/>
     </div>
 </div>
