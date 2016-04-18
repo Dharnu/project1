@@ -34,7 +34,9 @@
 					console.log("add event");
 					this.alertObjects.unshift({
 						id: 100,
-						data: $scope.createEvent
+						data: $scope.createEvent,
+						displayed:true
+
 					});
 				};
 			},
@@ -52,6 +54,7 @@
 				c[0].addElementForDemo = (function() {
 					var copiedIndex = 0;
 					var objectsToSpliceFromBottom = 1;
+					var prevcopyindex =copiedIndex;
 					return function(paused) {
 						console.log(objectsToSpliceFromBottom);
 						console.log(copiedIndex);
@@ -59,9 +62,11 @@
 						if (objectsToSpliceFromBottom > 1 && !paused) {
 							for (i = 0; i < objectsToSpliceFromBottom; i++) {
 								c[0].alertObjects[i]["displayed"] = !paused;
+								console.log("!came");
 							}
 						};
 						if (!paused) {
+							if(copiedIndex<0){copiedIndex=prevcopyindex};
 							//console.log("came");
 							c[0].alertObjects[c[0].alertObjects.length - objectsToSpliceFromBottom - copiedIndex]["displayed"] = !paused;
 							// c[0].alertObjects.unshift(
@@ -74,15 +79,16 @@
 							//very nice :: http://animate.javascript.codesolution.site/520463-3633-animate-animate-wrong-using-track-index-repeat.html
 							c[0].alertObjects.unshift(angular.copy(c[0].alertObjects[c[0].alertObjects.length - objectsToSpliceFromBottom - copiedIndex]));
 						copiedIndex++;
+						prevcopyindex=copiedIndex;
 						}
 						if (paused) {
-							c[0].alertObjects[c[0].alertObjects.length - objectsToSpliceFromBottom - copiedIndex]["displayed"] =paused;
+							c[0].alertObjects[c[0].alertObjects.length - 1 - copiedIndex]["displayed"] =paused;
 							c[0].alertObjects.unshift(angular.copy(c[0].alertObjects[c[0].alertObjects.length - objectsToSpliceFromBottom - copiedIndex]));
 							
 							c[0].alertObjects[0]["displayed"] = false;
-							console.log(c[0].alertObjects[0].displayed);
+							console.log(c[0].alertObjects);
 							console.log(c[0].alertObjects[0].id);
-						copiedIndex++;
+						//copiedIndex++;
 						}
 						//copiedIndex++;
 						if (c[0].alertObjects.length >= a.count) {
@@ -92,7 +98,7 @@
 								//c[0].alertObjects.splice(c[0].alertObjects.length - 1, 1);
 								c[0].alertObjects = c[0].alertObjects.slice(0, c[0].alertObjects.length - objectsToSpliceFromBottom);
 								objectsToSpliceFromBottom = 1;
-							} if(paused) {
+							} if(paused) {copiedIndex++;
 								objectsToSpliceFromBottom++;
 								console.log("came");
 							}
