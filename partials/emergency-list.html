@@ -1,4 +1,4 @@
-<div class="mainDiv" count="10" interval="1000">
+<div class="mainDiv" count="5" interval="1000">
     <div style="height:35px;background-color: #e3e3e3;">
         <strong>Emergency List</strong>
     </div>
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects  | stopdisplay " key-property="id" ng-click="emergencyList.click($index)" >
+        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects  | stopdisplay "  ng-click="emergencyList.click($index)" >
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
