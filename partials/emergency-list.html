@@ -1,4 +1,4 @@
-<div class="mainDiv">
+<div class="mainDiv" count="10" interval="5000">
     <div style="height:35px;background-color: #e3e3e3;">
         <strong>Emergency List</strong>
     </div>
@@ -12,8 +12,10 @@
                 <input type="submit" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
             </div>
         </div>
-        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects" ng-click="emergencyList.click($index)">
+
+        <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects track by $index" key-property="id" ng-click="emergencyList.click($index)" >
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="color: #269abc;" >
