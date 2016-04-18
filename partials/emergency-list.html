@@ -1,35 +1,37 @@
-<div class="mainDiv" count="10" interval="5000">
-    <div style="height:35px;background-color: #e3e3e3;">
+<div class="mainDiv" count="10" interval="3000">
+    <div style="height:35px; width:99%;margin-left: auto;margin-right: auto;background-color: #e3e3e3;">
         <strong>Emergency List</strong>
     </div>
-    <div class="scrollDiv">
-        <div class="row createEvent">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding: 20px">
-                <input type="text" id="emgList" name="emgList" placeholder="Create Event..." ng-model="createEvent"/>
-                <input type="submit" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
-            </div>
+    <div class="row createEvent">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
         </div>
-
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <input type="text" style="width: 100%" class="form-control" id="emgList" name="emgList" placeholder="Create Event..." ng-model="createEvent"/></br>
+            <input type="submit" class="pull-right" id="emgListSubmit" value="Submit" ng-click="emergencyList.addEvent()">
+        </div>
+    </div>
+    <div class="scrollDiv">
         <div class="row insideScroll" ng-animate  ng-repeat="alertObject in emergencyList.alertObjects track by $index" key-property="id" ng-click="emergencyList.click($index)" >
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <img src="images/logo.jpg" alt="logo"  width="100px" height="80px">
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="color: #269abc;" >
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="color: #269abc;" >
                 #STATUS from #Serial number {{alertObject.id}}</br>
                 {{alertObject.data}}
 
                 </br>
                 </br>
-                30Seconds Ago  Ack . Ignore 6
+                <div class="row">
+                    <div class="col-lg-5">30Seconds Ago</div>
+                    <div class="col-lg-4">. Ack . Ignore</div>
+                    <div class="col-lg-3">1 View</div>
+                </div>
             </div>
         </div>
     </div>
     <div>
-        <input type="button" value="Active">
-        <input type="button" value="Pause">
+        <input type="button" value="Active"/>
+        <input type="button" value="Pause"/>
     </div>
 </div>

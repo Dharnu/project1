@@ -3,15 +3,33 @@
     -moz-box-shadow: 1px 1px 10px 5px #999099;
     box-shadow: 1px 1px 10px 5px #999099;
 }
+.borderRadius{
+    border-top-left-radius: 25px;
+    border: 2px solid #73AD21;
+}
 .scrollDiv{
-    height:450px;
+    height:350px;
     width:100%;
     overflow:scroll;
     overflow-x:hidden;
     overflow-y:scroll;
 }
+.mainViewScroll{
+    height:250px;
+    width:100%;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+pageComponents {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 0px 0px 0px 1px; 
+}
+
 .pageComponent{
-    border: 2px solid #2a6496;
+    /*border-radius: 25px;*/
+    border: 0px solid #2a6496;
     padding: 1px;
 }
 .insideScroll{
@@ -19,12 +37,20 @@
     margin-top: 10px; 
     border: 1px solid;
     cursor:pointer;
+    padding: 10px 5px 10px 10px;
+    width:95%;
+    margin-right: auto;
+    margin-left: auto
 }
 .createEvent{
     background-color: #e1edf7;
     margin-top: 20px; 
     margin-bottom: 20px;
     border: 1px solid;
+    padding: 10px 5px 10px 10px;
+    width:95%;
+    margin-right: auto;
+    margin-left: auto
 }
 .tableDiv{
     background-color: #e1edf7;
@@ -38,6 +64,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto }
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -84,18 +111,38 @@ th {
 }
 
 .ng-move {
-  -webkit-transition: 1s ease;
-  transition: 1s ease ;
+ -webkit-transition: 2s;
+  transition: 2s;
+  
+   background: gold;
+ -webkit-transition: 1s ease;
+ transition: 1s ease ;
 /*  opacity: 0;
   background-color: #4CAF50;*/
+  height: 0;
+  }
+  
+  .ng-move-active {
+  background: #fff;
+ /*  opacity: 1;
+   background-color: #c1e2b3;*/
+  height: 20%;
+ }
+  
+/*
+.ng-move {
+  -webkit-transition: 1s ease;
+  transition: 1s ease ;
+  opacity: 0;
+  background-color: #4CAF50;
   height: 0;
 }
 
 .ng-move-active {
-/*  opacity: 1;
-  background-color: #c1e2b3;*/
+  opacity: 1;
+  background-color: #c1e2b3;
  height: 20%;
-}
+}*/
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {
