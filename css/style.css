@@ -3,15 +3,56 @@
     -moz-box-shadow: 1px 1px 10px 5px #999099;
     box-shadow: 1px 1px 10px 5px #999099;
 }
+.borderRadius{
+    border-radius: 25px;
+    border: 2px solid #a4a4a4;
+}
 .scrollDiv{
-    height:450px;
+    height:350px;
     width:100%;
     overflow:scroll;
     overflow-x:hidden;
     overflow-y:scroll;
 }
+.listDiv{
+    height:40px; 
+/*    width:99%;
+    margin-left: auto;
+    margin-right: auto;*/
+    background-color: #e3e3e3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid #a4a4a4;
+    padding: 10px 0px 0px 25px;
+}
+
+.tableListDiv{
+    height:40px; 
+    width:99%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e3e3e3;
+    border: 2px solid #a4a4a4;
+    padding: 10px 0px 0px 25px;
+}
+.mainViewScroll{
+    height:200px;
+    width:99.5%;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    margin-left: auto;
+    margin-right: auto;
+}
+pageComponents {
+    border-radius: 25px;
+    border: 2px solid #a4a4a4;
+    padding: 0px 0px 0px 1px; 
+}
+
 .pageComponent{
-    border: 2px solid #2a6496;
+    /*border-radius: 25px;*/
+    border: 0px solid #a4a4a4;
     padding: 1px;
 }
 .insideScroll{
@@ -19,17 +60,26 @@
     margin-top: 10px; 
     border: 1px solid;
     cursor:pointer;
+    padding: 10px 5px 10px 10px;
+    width:95%;
+    margin-right: auto;
+    margin-left: auto
 }
 .createEvent{
     background-color: #e1edf7;
     margin-top: 20px; 
     margin-bottom: 20px;
     border: 1px solid;
+    padding: 10px 5px 10px 10px;
+    width:95%;
+    margin-right: auto;
+    margin-left: auto
 }
 .tableDiv{
     background-color: #e1edf7;
     margin-top: 5px; 
     border: 1px solid; 
+    width: 100%;
 }
 .mainView{
     cursor:pointer;
@@ -38,6 +88,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto }
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -53,48 +104,6 @@ tr:nth-child(even){background-color: #f2f2f2}
 th {
     background-color: #4CAF50;
     color: white;
-}
-
-.ng-enter {
-  -webkit-transition: 1s ease;
-  transition: 1s ease ;
-/* opacity: 0;
-  background-color: #4CAF50;*/
-/*  margin-top: 0; */
-  height: 0;
-}
-
-.ng-enter-active {
-   
-/*  opacity: 1;
-  background-color: #c1e2b3;*/
-/*  margin-top: 20%;*/
-  height: 20%;
-}
-        
-.ng-leave {
-  -webkit-transition: 1s;
-  transition: 1s;
-  
-  margin-left: 0;
-}
-
-.ng-leave-active {
-  margin-left: 100%;
-}
-
-.ng-move {
-  -webkit-transition: 1s ease;
-  transition: 1s ease ;
-/*  opacity: 0;
-  background-color: #4CAF50;*/
-  height: 0;
-}
-
-.ng-move-active {
-/*  opacity: 1;
-  background-color: #c1e2b3;*/
- height: 20%;
 }
 
 /* Style the Image Used to Trigger the Modal */
@@ -125,7 +134,7 @@ th {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     max-width: 700px;
 }
 
@@ -172,3 +181,47 @@ th {
         width: 100%;
     }
 }
+
+
+.ng-enter {
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    margin-left: 100%
+}
+
+.ng-enter-active {
+  margin-left: 20px;
+}
+        
+.ng-leave {
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    margin-left: 0;
+}
+
+.ng-leave-active {
+  margin-left: 100%;
+}
+
+.ng-move {
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    background: gold;
+   
+    height: 0;
+}
+  
+  .ng-move-active {
+  background: #fff;
+ 
+  height: 20%;
+ }

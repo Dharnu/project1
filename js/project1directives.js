@@ -192,6 +192,28 @@
 			}
 		}
 	}]);
+        app.directive("callCenter", function() {
+                    return {
+                            restrict: 'E',
+                            scope: {},
+                            templateUrl: "./partials/call-center.html",
+                            controller: function() {},
+                            link: function(s, e, a, c) {
+                                    //	console.log(s.$parent.main);
+                            }
+                    }
+            });
+            app.directive("touchPoint", function() {
+                    return {
+                            restrict: 'E',
+                            scope: {},
+                            templateUrl: "./partials/touch-point.html",
+                            controller: function() {},
+                            link: function(s, e, a, c) {
+                                    //	console.log(s.$parent.main);
+                            }
+                    }
+            });
 
 
 })();

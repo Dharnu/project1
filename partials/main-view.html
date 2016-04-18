@@ -1,9 +1,9 @@
 <div class="row" style="margin-top: 20px;">
-    <div class="mainDiv">
-        <div style="height:35px;background-color: #e3e3e3;">
+    <div class="mainDiv borderRadius" style="padding:7px 0 0;height: 280px;">
+        <div class="tableListDiv">
             <strong>Main View</strong>
         </div>
-        <div class="scrollDiv"  style="margin-top: 20px;">
+        <div class="mainViewScroll"  style="margin-top: 10px;">
             <div class="row tableDiv" >
                 <table>
                     <tr>
@@ -20,7 +20,13 @@
                       <td>{{individualValue.data.POC}}</td>
                       <td>{{individualValue.data.LastActivity}}</td>
                     </tr>
-                    
+                    <tr class="mainView" ng-repeat="individualValue in mainView.individualValue"   ng-click="mainView.click($index)">
+                      <td>{{individualValue.data.Patient}}</td>
+                      <td>{{individualValue.data.Office}}</td>
+                      <td>{{individualValue.data.Phone}}</td>
+                      <td>{{individualValue.data.POC}}</td>
+                      <td>{{individualValue.data.LastActivity}}</td>
+                    </tr>
                   </table>
             </div>
         </div>
