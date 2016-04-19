@@ -87,7 +87,12 @@ pageComponents {
 .imgCenter img {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto;
+    max-width:400px;
+    max-height:400px;
+    width:auto;
+    height:auto;
+}
 
 table {
     border-collapse: collapse;
@@ -145,6 +150,8 @@ th {
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
+    margin-top: 8%;
+    margin-bottom: auto;
 }
 
 @-webkit-keyframes zoom {
@@ -190,10 +197,13 @@ th {
     -o-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
      margin-top: -20%;
+     background-color: gold;
 }
 
 .ng-enter-active {
   margin-top: 0;
+  background-color: #fff;
+  
 }
         
 .ng-leave {
