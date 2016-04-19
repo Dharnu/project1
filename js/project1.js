@@ -24,7 +24,7 @@
                
                 id2:"images/chart2.png",
                 
-                id3:"images/chart3.png",
+                id3:"images/graph.jpg",
                 
                 id4:"images/chart4.jpg"
             };
