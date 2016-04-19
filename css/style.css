@@ -184,37 +184,37 @@ th {
 
 
 .ng-enter {
-    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    margin-left: 100%
+    -webkit-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+     margin-top: -20%;
 }
 
 .ng-enter-active {
-  margin-left: 20px;
+  margin-top: 0;
 }
         
 .ng-leave {
-    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    margin-left: 0;
+    -webkit-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    margin-top: 0;
 }
 
 .ng-leave-active {
-  margin-left: 100%;
+  margin-top: 100%;
 }
 
 .ng-move {
-    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -webkit-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 1250ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     background: gold;
    
     height: 0;
