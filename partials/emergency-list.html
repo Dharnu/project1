@@ -19,15 +19,17 @@
             </div>
             <div class="col-lg- 9 col-md-9 col-sm-9 col-xs-9" style="color: #269abc;" >
                 <span class="pull-right"><img src="images/tick.png" height="20px" width="20px"></span>
-                #STATUS from #Serial number {{alertObject.id}}</br>
-                {{alertObject.data}}
+                <span class="fontColor" style="font-weight: bold;">
+                    #STATUS from #Serial number {{alertObject.id}}</br>
+                    {{alertObject.data}}
+                </span>
 
                 </br>
                 </br>
                 <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6">30Seconds Ago</div>
-                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6">. Ack . Ignore</div>
-                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-6">1 View</div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6"><span class="fontColor">{{alertObject.status}}</span></div>
+                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6"><span class="fontColor">. Ack . Ignore</span></div>
+                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-6"><span class="fontColor">1 View</span></div>
                 </div>
             </div>
         </div>

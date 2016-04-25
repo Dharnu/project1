@@ -2,8 +2,15 @@
     <div class="listDiv">
         <strong>ADL Charting</strong>
     </div>
-    <div class="imgCenter" style="height: 415px;margin-left: auto;margin-right: auto; margin-bottom: auto;margin-top: 100px;">
-        <img id="myImg" ng-src="{{graphImage.displayImage}}" alt="Home Care" onclick="showImgModal()"/>
+    <div class="imgCenter" style="height: 250px;margin-left: auto;margin-right: auto; margin-bottom: auto;">
+        <img id="myImg1" ng-src="{{graphImage.displayImage[0]}}" alt="Home Care" onclick="showImgModal(1)"/>
+    </div>
+    <hr>
+    <div class="imgCenter1" style="height: 215px;margin-left: auto;margin-right: auto; margin-bottom: auto;margin-top: 35px;float: left;">
+        <img id="myImg2" ng-src="{{graphImage.displayImage[1]}}" alt="Home Care" onclick="showImgModal(2)"/>
+    </div>
+    <div class="imgCenter1" style="height: 215px;margin-left: auto;margin-right: auto; margin-bottom: auto;margin-top: 35px;">
+        <img id="myImg3" ng-src="{{graphImage.displayImage[2]}}" alt="Home Care" onclick="showImgModal(3)"/>
     </div>
 </div>
 
