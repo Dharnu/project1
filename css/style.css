@@ -97,7 +97,7 @@ pageComponents {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width:245px;
+    max-width:150px;
     max-height:200px;
     width:auto;
     height:auto;
@@ -112,8 +112,6 @@ th, td {
     text-align: left;
     padding: 8px;
 }
-
-tr:nth-child(even){background-color: #f2f2f2}
 
 th {
     background-color: #4CAF50;
@@ -245,7 +243,16 @@ th {
   height: 20%;
  }
  
- .fontColor {
+ .fontColor1 {
      color: #4F8BE7;
-     
+ }
+ .fontColor1 {
+     color: grey;
+     //4F8BE7
+ }
+ 
+ .selected {
+     background-color: black;
+     color: white;
+     font-weight: bold;
  }

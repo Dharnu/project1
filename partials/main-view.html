@@ -13,20 +13,14 @@
                       <th>POC</th>
                       <th>Last Activity</th>
                     </tr>
-                    <tr class="mainView" ng-repeat="individualValue in mainView.individualValue"   ng-click="mainView.click($index)">
+                    <tr class="mainView" ng-repeat="individualValue in mainView.individualValue"   ng-click="mainView.click($index)" ng-class="{'selected':$index==mainView.selectedRow}">
                       <td>{{individualValue.data.Patient}}</td>
                       <td>{{individualValue.data.Office}}</td>
                       <td>{{individualValue.data.Phone}}</td>
                       <td>{{individualValue.data.POC}}</td>
                       <td>{{individualValue.data.LastActivity}}</td>
                     </tr>
-                    <tr class="mainView" ng-repeat="individualValue in mainView.individualValue"   ng-click="mainView.click($index)">
-                      <td>{{individualValue.data.Patient}}</td>
-                      <td>{{individualValue.data.Office}}</td>
-                      <td>{{individualValue.data.Phone}}</td>
-                      <td>{{individualValue.data.POC}}</td>
-                      <td>{{individualValue.data.LastActivity}}</td>
-                    </tr>
+                    
                   </table>
             </div>
         </div>

@@ -173,17 +173,19 @@
 		}
 	}]);
 
-	app.directive('mainView', ['communication', function(communication) {
+	app.directive('mainView', ['communication', function(communication, $scope) {
 		return {
 			restrict: 'E',
 			scope: {},
 			templateUrl: "./partials/main-view.html",
 			require: ['mainView'],
-			controller: function() {
+			controller: function($scope) {
 				this.individualValue;
+                                this.selecterRow = null;
 				this.click = function(num) {
 					//console.log("mainview click");
 					communication.tellgraph(this.individualValue[num].id);
+                                        this.selecterRow = num;
 				};
 			},
 			controllerAs: 'mainView',
